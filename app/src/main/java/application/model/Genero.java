@@ -7,30 +7,23 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="livros")
-public class Livro {
+@Table(name="generos")
+public class Genero {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int id;
-    private String titulo;
-    private String isbn;
+    private String nome;
 
-    public String getIsbn() {
-        return isbn;
-    }
-    public void setIsbn(String isbn) {
-        this.isbn = isbn;
-    }
     public int getId() {
         return id;
     }
     public void setId(int id) {
         this.id = id;
     }
-    public String getTitulo() {
-        return titulo;
+    public String getNome() {
+        return nome;
     }
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }   
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 }
